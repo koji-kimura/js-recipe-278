@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>clock</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div class="clock">
+      <div class="lineHour"></div>
+      <div class="lineMin"></div>
+      <div class="lineSec"></div>
+    </div>
+
+    <script src="src/chap5/recipe-93.js"></script>
+    <style type="text/css">
+      .clock {
+        border-radius: 50%;
+        border: 3px solid white;
+        width: 400px;
+        height: 400px;
+        background: rgba(255, 255, 255, 0.1);
+        position: relative;
+      }
+
+      .lineHour {
+        width: 10px;
+        height: 150px;
+        background: white;
+        position: absolute;
+        top: calc(50% -150px);
+        left: calc(50%-5px);
+        transform-origin: bottom;
+      }
+
+      .lineMin {
+        width: 4px;
+        height: 200px;
+        background: white;
+        position: absolute;
+        top: calc(50%-200px);
+        left: calc(50% 2px);
+        transform-origin: bottom;
+      }
+      .lineSec {
+        width: 2px;
+        height: 200px;
+        background: #ccc;
+        position: absolute;
+        top: calc(50%-200px);
+        left: calc(50% 1px);
+        transform-origin: bottom;
+      }
+    </style>
+  </body>
+</html>
