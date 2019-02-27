@@ -14,7 +14,7 @@ setInterval(() => {
   const degS = s * (360 / 60);
   const elementH = document.querySelector(".lineHour");
   const elementM = document.querySelector(".lineMin");
-  const elementM = document.querySelector(".lineSec");
+  const elementS = document.querySelector(".lineSec");
 
   elementH.style.transform = `rotate(${degH}deg)`;
   elementM.style.transform = `rotate(${degM}deg)`;
