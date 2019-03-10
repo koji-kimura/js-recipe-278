@@ -20,7 +20,7 @@ document.addEventListener("mousemove", () => {
   });
 });
 
-// マウスがうご書いた時の処理
+// マウスをうごかした時の処理
 function onMouseMove(event) {
   character.style.left = `${event.clientX - 100}px`;
   character.style.top = `${event.clientY - 100}px`;
