@@ -2,8 +2,16 @@
 // 自前のフリック処理を実現するとき
 // タッチ位置に要素を動かすとき
 
-const box = document.querySelector(".box");
+const targetBox = document.querySelector(".box");
 
-box.addEventListener("touchstart", event => {
-  // タッチ情報のリスト
+// ログ
+const log = document.querySelector(".log");
+
+// 画像上でタッチ位置を移動したら、ログを表示
+targetBox.addEventListener("touchmove", () => {
+  const touch = event.changeTouches;
+  log.innerHTML = `
+    ${touch[0].pageX.toFixed(2)}<br>
+    ${touch[0].pageY.toFixed(2)}
+  `;
 });
