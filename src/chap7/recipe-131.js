@@ -7,7 +7,7 @@
 
 //matchesプロパティを用いて、ブラウザーウィンドウのサイズがメディアクエリに一致するかどうかを調べる
 
-const rectAngle = document.querySelector(".reactangle");
+const rectAngle = document.querySelector(".rectangle");
 
 // メディアクエリ情報
 const mediaQueryList = matchMedia("(min-width:600px)");
@@ -16,7 +16,7 @@ const mediaQueryList = matchMedia("(min-width:600px)");
 mediaQueryList.addListener(onMediaQueryChange);
 
 function onMediaQueryChange(mediaQueryList) {
-  if (mediaQueryList.match === true) {
+  if (mediaQueryList.matches === true) {
     rectAngle.classList.add("big-size");
     console.log("ウィンドウサイズが600pxを超えました");
   } else {
