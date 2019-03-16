@@ -9,3 +9,7 @@ body {
 .rectangle.big-size {
   background-image: linear-gradient(red, #ff00a2);
 }
+
+.scrollable-element {
+  overflow-y: scroll;
+}
