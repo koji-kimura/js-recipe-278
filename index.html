@@ -6,12 +6,18 @@
   </head>
 
   <body>
-    <div id="myBox1">#myBox1要素</div>
-    <div id="myBox2">#myBox2要素</div>
-    <div class="container">
-      <div>子要素1</div>
-      <div id="box2">子要素2</div>
-    </div>
+    <div id="parent"><div id="child">取り除かれる要素</div></div>
+    <!--
+      <div class="container">
+        <div class="box">子要素</div>
+        <div class="box">子要素2</div>
+      </div>
+    -->
+    <!--
+      <div id="myBox1">#myBox1要素</div>
+      <div id="myBox2">#myBox2要素</div>
+      <div class="container"><div id="targetBox">子要素</div></div>
+    -->
     <!--
       <div id="parent">
         <div id="child1">子要素1</div>
@@ -28,6 +34,6 @@
       <p id="log">aaa</p>
       <p id="foo">bbb</p>
     -->
-    <script src="src/chap8/recipe-143.js"></script>
+    <script src="src/chap8/recipe-147.js"></script>
   </body>
 </html>
