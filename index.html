@@ -7,9 +7,24 @@
     <title>Document</title>
   </head>
   <body>
+    <!-- １つ目のラジオボタングループ -->
+    <form id="radioGroup">
+      <label>
+        <input type="radio" name="fruit" value="apple" checked /> Apple</label
+      >
+      <label> <input type="radio" name="fruit" value="orange" /> Orange</label>
+      <label> <input type="radio" name="fruit" value="grape" /> Grape</label>
+      <label> <input type="radio" name="drink" value="coke" /> coke</label>
+      <label> <input type="radio" name="drink" value="wine" /> wine</label>
+      <label>
+        <input type="radio" name="drink" value="tea" checked /> tea</label
+      >
+    </form>
     <!-- acceptでアップする拡張子指定できるのね -->
-    <input type="file" id="myFile" accept=".jpg" />
-    <p class="log"><img /></p>
+    <!--
+      <input type="file" id="myFile" accept=".jpg" />
+      <p class="log"><img /></p>
+    -->
     <!-- <input type="file" id="myFile" accept=".text" /> -->
     <!--
       <label>
@@ -40,6 +55,6 @@
       <input id="myText" type="text" value="こんにちは世界" />
       <p class="log"></p>
     -->
-    <script src="src/chap9/recipe-169.js"></script>
+    <script src="src/chap9/recipe-171.js"></script>
   </body>
 </html>
