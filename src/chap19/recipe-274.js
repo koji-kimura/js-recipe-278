@@ -9,7 +9,7 @@ function* range(start, end) {
 }
 // 使用例
 // ジェネレータの利用例として指定の範囲の整数を人ずつ返すイテレータの作例
-//while()内のyieldが実行されるたびに関数が一時停止してnext()が呼ばれると再会する
+//while()内のyieldが実行されるたびに関数が一時停止してnext()が
 for (let value of range(2, 6)) {
   console.log(value);
 }
