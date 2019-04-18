@@ -5,50 +5,70 @@ console.dir(Array.prototype);
 console.dir(Date.prototype);
 
 Array.prototype.myMethod = function() {
-  console.logu("こんにちは");
+  console.log("こんにちは");
 };
 
-// 「shuffle」という名前のSymbol
+Array.prototype.filter = function() {
+  console.log("既存のfilterを無視したメソッド");
+};
+
+//Symbolによってユニーク性が担保される
 const shuffle = Symbol();
-// 配列のシャッフル関数を追加
-Array.prototype[shuffle] = function() {
-  // シャッフル処理
-  const arrayLength = this.length;
-  for (let i = arrayLength - 1; i >= 0; i--) {
-    const randomIndex = Math.floor(Math.random() * (i + 1));
-    [this[i], this[randomIndex]] = [this[randomIndex], this[i]];
-  }
+// Array.prototypeの「shuffle」メンバーに関数を追加する
+Array.prototype[shuffle] = function() {};
 
-  //自分を返す
-  return this;
-};
+const array = [1, 2, 3];
 
-// シャッフルテスト
-// 配列の各数値を偶数抜き出し、シャッフルして100倍にする
-const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// 自前のshuffle()メソッド
+array[shuffle]();
+// 将来追加されたshuffle()メソッド
+array.shuffle();
 
-const x = array
-  .filter(value => value % 2 === 0)
-  [shuffle]()
-  .map(value => value * 100);
+// const array2 = [1, 2, 3];
 
-// console.log(x);
+// array2.myMethod();
 
-// // 配列やオブジェクトに独自メソッドを追加したい
-// // 配列にシャッフル関数を追加したい時
-// // オブジェクトにJSON変換メソッドを追加したい時
+// // 「shuffle」という名前のSymbol
+// const shuffle = Symbol();
+// // 配列のシャッフル関数を追加
+// Array.prototype[shuffle] = function() {
+//   // シャッフル処理
+//   const arrayLength = this.length;
+//   for (let i = arrayLength - 1; i >= 0; i--) {
+//     const randomIndex = Math.floor(Math.random() * (i + 1));
+//     [this[i], this[randomIndex]] = [this[randomIndex], this[i]];
+//   }
 
-// // オブジェクト.srototype[シンボル] = function(){} オブジェクトに独自のメソッドを追加する
-// //　オブジェクト[シンボル]()  独自メソッドを実行する
-
-// // 「myMethod」という名前のSymbol()生成
-// const myMethod = Symbol();
-
-// // 独自メソッドの追加
-// Array.prototype[myMethod] = function() {
-//   console.log("独自メソッドです");
+//   //自分を返す
+//   return this;
 // };
 
-// // 独自メソッドの実行
-// const array = [1, 2, 3];
-// array[myMethod]();
+// // シャッフルテスト
+// // 配列の各数値を偶数抜き出し、シャッフルして100倍にする
+// const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// const x = array
+//   .filter(value => value % 2 === 0)
+//   [shuffle]()
+//   .map(value => value * 100);
+
+// // console.log(x);
+
+// // // 配列やオブジェクトに独自メソッドを追加したい
+// // // 配列にシャッフル関数を追加したい時
+// // // オブジェクトにJSON変換メソッドを追加したい時
+
+// // // オブジェクト.srototype[シンボル] = function(){} オブジェクトに独自のメソッドを追加する
+// // //　オブジェクト[シンボル]()  独自メソッドを実行する
+
+// // // 「myMethod」という名前のSymbol()生成
+// // const myMethod = Symbol();
+
+// // // 独自メソッドの追加
+// // Array.prototype[myMethod] = function() {
+// //   console.log("独自メソッドです");
+// // };
+
+// // // 独自メソッドの実行
+// // const array = [1, 2, 3];
+// // array[myMethod]();
